@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqe-CR-udr">
+                                <rect key="frame" x="163" y="137" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwY-EP-z70"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xGz-11-vg7">
+                                <rect key="frame" x="171" y="303.5" width="32" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8Q-Bz-q3m">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4J-Rp-ksY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Uw-KH-8t1">
+                                <rect key="frame" x="172" y="470.5" width="30" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvW-sc-0lv">
+                                        <rect key="frame" x="0.0" y="0.5" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rs0-zd-I0z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wqe-CR-udr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cbr-Fn-xdl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kvW-sc-0lv" secondAttribute="bottom" multiplier="4:3" id="Chn-lm-b8M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xGz-11-vg7" secondAttribute="bottom" multiplier="4:2" id="I9E-D4-tec"/>
+                            <constraint firstItem="xGz-11-vg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZI-NF-pTk"/>
+                            <constraint firstItem="4Uw-KH-8t1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RUc-ef-6xS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wqe-CR-udr" secondAttribute="bottom" multiplier="4:1" id="lDg-yW-pVz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="kvW-sc-0lv" id="YBH-hg-UnX"/>
+                        <outlet property="recordButton" destination="Wqe-CR-udr" id="ikk-xc-70X"/>
+                        <outlet property="stopButton" destination="K8Q-Bz-q3m" id="GQf-Vm-o8v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

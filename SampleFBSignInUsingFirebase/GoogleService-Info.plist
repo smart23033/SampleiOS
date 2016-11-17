@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>915713878876-0iipconetqslcltlhkk6bcbjj6m2h5pt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.915713878876-0iipconetqslcltlhkk6bcbjj6m2h5pt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCxAoVYrxCHh8LnEsr0rLWDfMBG22ZCPto</string>
+	<key>GCM_SENDER_ID</key>
+	<string>915713878876</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kr.co.poppay.SampleFBSignInUsingFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>wide-decoder-133623</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wide-decoder-133623.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:915713878876:ios:e18d4fb49046a0ee</string>
+	<key>DATABASE_URL</key>
+	<string>https://wide-decoder-133623.firebaseio.com</string>
+</dict>
+</plist>

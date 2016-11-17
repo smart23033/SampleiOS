@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855A12CD1DD0033400B273F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 855A12CC1DD0033400B273F9 /* main.m */; };
+		855A12D01DD0033400B273F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 855A12CF1DD0033400B273F9 /* AppDelegate.m */; };
+		855A12D31DD0033400B273F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855A12D21DD0033400B273F9 /* ViewController.m */; };
+		855A12D61DD0033400B273F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855A12D41DD0033400B273F9 /* Main.storyboard */; };
+		855A12D81DD0033400B273F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855A12D71DD0033400B273F9 /* Assets.xcassets */; };
+		855A12DB1DD0033400B273F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855A12D91DD0033400B273F9 /* LaunchScreen.storyboard */; };
+		855A12E51DD003D700B273F9 /* bell_tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 855A12E21DD003D700B273F9 /* bell_tree.mp3 */; };
+		855A12E61DD003D700B273F9 /* burstsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 855A12E31DD003D700B273F9 /* burstsound.mp3 */; };
+		855A12E71DD003D700B273F9 /* Moderato.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 855A12E41DD003D700B273F9 /* Moderato.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		855A12C81DD0033400B273F9 /* SampleLocalNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleLocalNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		855A12CC1DD0033400B273F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		855A12CE1DD0033400B273F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		855A12CF1DD0033400B273F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		855A12D11DD0033400B273F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		855A12D21DD0033400B273F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		855A12D51DD0033400B273F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		855A12D71DD0033400B273F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		855A12DA1DD0033400B273F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		855A12DC1DD0033400B273F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		855A12E21DD003D700B273F9 /* bell_tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell_tree.mp3; sourceTree = "<group>"; };
+		855A12E31DD003D700B273F9 /* burstsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = burstsound.mp3; sourceTree = "<group>"; };
+		855A12E41DD003D700B273F9 /* Moderato.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Moderato.mp3; sourceTree = "<group>"; };
+		855A12E91DD0616500B273F9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		855A12EB1DD0618500B273F9 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		855A12C51DD0033400B273F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		855A12BF1DD0033400B273F9 = {
+			isa = PBXGroup;
+			children = (
+				855A12E21DD003D700B273F9 /* bell_tree.mp3 */,
+				855A12E31DD003D700B273F9 /* burstsound.mp3 */,
+				855A12E41DD003D700B273F9 /* Moderato.mp3 */,
+				855A12CA1DD0033400B273F9 /* SampleLocalNotification */,
+				855A12C91DD0033400B273F9 /* Products */,
+				855A12E81DD0616500B273F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		855A12C91DD0033400B273F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855A12C81DD0033400B273F9 /* SampleLocalNotification.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855A12CA1DD0033400B273F9 /* SampleLocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				855A12CE1DD0033400B273F9 /* AppDelegate.h */,
+				855A12CF1DD0033400B273F9 /* AppDelegate.m */,
+				855A12D11DD0033400B273F9 /* ViewController.h */,
+				855A12D21DD0033400B273F9 /* ViewController.m */,
+				855A12D41DD0033400B273F9 /* Main.storyboard */,
+				855A12D71DD0033400B273F9 /* Assets.xcassets */,
+				855A12D91DD0033400B273F9 /* LaunchScreen.storyboard */,
+				855A12DC1DD0033400B273F9 /* Info.plist */,
+				855A12CB1DD0033400B273F9 /* Supporting Files */,
+			);
+			path = SampleLocalNotification;
+			sourceTree = "<group>";
+		};
+		855A12CB1DD0033400B273F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				855A12CC1DD0033400B273F9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		855A12E81DD0616500B273F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855A12EB1DD0618500B273F9 /* UserNotifications.framework */,
+				855A12E91DD0616500B273F9 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		855A12C71DD0033400B273F9 /* SampleLocalNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855A12DF1DD0033400B273F9 /* Build configuration list for PBXNativeTarget "SampleLocalNotification" */;
+			buildPhases = (
+				855A12C41DD0033400B273F9 /* Sources */,
+				855A12C51DD0033400B273F9 /* Frameworks */,
+				855A12C61DD0033400B273F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleLocalNotification;
+			productName = SampleLocalNotification;
+			productReference = 855A12C81DD0033400B273F9 /* SampleLocalNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		855A12C01DD0033400B273F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = poppay;
+				TargetAttributes = {
+					855A12C71DD0033400B273F9 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 855A12C31DD0033400B273F9 /* Build configuration list for PBXProject "SampleLocalNotification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 855A12BF1DD0033400B273F9;
+			productRefGroup = 855A12C91DD0033400B273F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				855A12C71DD0033400B273F9 /* SampleLocalNotification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		855A12C61DD0033400B273F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855A12E61DD003D700B273F9 /* burstsound.mp3 in Resources */,
+				855A12DB1DD0033400B273F9 /* LaunchScreen.storyboard in Resources */,
+				855A12E51DD003D700B273F9 /* bell_tree.mp3 in Resources */,
+				855A12E71DD003D700B273F9 /* Moderato.mp3 in Resources */,
+				855A12D81DD0033400B273F9 /* Assets.xcassets in Resources */,
+				855A12D61DD0033400B273F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		855A12C41DD0033400B273F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855A12D31DD0033400B273F9 /* ViewController.m in Sources */,
+				855A12D01DD0033400B273F9 /* AppDelegate.m in Sources */,
+				855A12CD1DD0033400B273F9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		855A12D41DD0033400B273F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855A12D51DD0033400B273F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		855A12D91DD0033400B273F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855A12DA1DD0033400B273F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		855A12DD1DD0033400B273F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		855A12DE1DD0033400B273F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		855A12E01DD0033400B273F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleLocalNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.poppay.SampleLocalNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		855A12E11DD0033400B273F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleLocalNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.poppay.SampleLocalNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		855A12C31DD0033400B273F9 /* Build configuration list for PBXProject "SampleLocalNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855A12DD1DD0033400B273F9 /* Debug */,
+				855A12DE1DD0033400B273F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855A12DF1DD0033400B273F9 /* Build configuration list for PBXNativeTarget "SampleLocalNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855A12E01DD0033400B273F9 /* Debug */,
+				855A12E11DD0033400B273F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 855A12C01DD0033400B273F9 /* Project object */;
+}

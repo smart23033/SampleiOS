@@ -1,0 +1,16 @@
+target 'SampleGMap' do
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.1'
+pod 'GoogleMaps'
+
+  target 'SampleGMapTests' do
+    inherit! :search_paths
+    # Pods for testing
+  and
+
+  target 'SampleGMapUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
