@@ -107,9 +107,8 @@
              NSError *error;
              NSDictionary *apiDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:&error];
              
-             
-             
-             //깃 수정 테스트3
+             //깃 수정 테스트 4
+             abc
              
          } failure:^(NSURLSessionTask *operation, NSError *error) {
              NSLog(@"%@", error);
