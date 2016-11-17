@@ -109,7 +109,7 @@
              
              
              
-             //깃 수정 테스트
+             //깃 수정 테스트2
              
          } failure:^(NSURLSessionTask *operation, NSError *error) {
              NSLog(@"%@", error);
