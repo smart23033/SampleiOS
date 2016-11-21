@@ -24,6 +24,9 @@
 		85B105071DD97640006F4CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B105051DD97640006F4CEB /* LaunchScreen.storyboard */; };
 		85B105111DD976A1006F4CEB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B1050E1DD976A1006F4CEB /* SearchViewController.m */; };
 		85B105121DD976A1006F4CEB /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B105101DD976A1006F4CEB /* ResultViewController.m */; };
+		85EB48EC1DE2C49B007E459E /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85EB48EB1DE2C49B007E459E /* Food.storyboard */; };
+		85EB48EE1DE2C82F007E459E /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85EB48ED1DE2C82F007E459E /* Movie.storyboard */; };
+		85EB48F01DE2C874007E459E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85EB48EF1DE2C874007E459E /* Weather.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		85B1050E1DD976A1006F4CEB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../../SampleAFNetworking/SampleAFNetworking/SearchViewController.m; sourceTree = "<group>"; };
 		85B1050F1DD976A1006F4CEB /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultViewController.h; path = ../../SampleAFNetworking/SampleAFNetworking/ResultViewController.h; sourceTree = "<group>"; };
 		85B105101DD976A1006F4CEB /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultViewController.m; path = ../../SampleAFNetworking/SampleAFNetworking/ResultViewController.m; sourceTree = "<group>"; };
+		85EB48EB1DE2C49B007E459E /* Food.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
+		85EB48ED1DE2C82F007E459E /* Movie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		85EB48EF1DE2C874007E459E /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		A17BD8FD84C41D1C36D5F266 /* Pods-MiniProject01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProject01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniProject01/Pods-MiniProject01.debug.xcconfig"; sourceTree = "<group>"; };
 		A3BD9DB4B8F3980A4E96068A /* Pods-MiniProject01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProject01.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniProject01/Pods-MiniProject01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +104,7 @@
 			children = (
 				8514C3F31DDC2378000402F1 /* FoodViewController.h */,
 				8514C3F41DDC2378000402F1 /* FoodViewController.m */,
+				85EB48EB1DE2C49B007E459E /* Food.storyboard */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 				85B1050E1DD976A1006F4CEB /* SearchViewController.m */,
 				85B1050F1DD976A1006F4CEB /* ResultViewController.h */,
 				85B105101DD976A1006F4CEB /* ResultViewController.m */,
+				85EB48EF1DE2C874007E459E /* Weather.storyboard */,
 			);
 			name = Weather;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 				856FC8301DDAD072003B8816 /* MovieTableViewController.m */,
 				8514C3EF1DDBEC42000402F1 /* MovieDetailViewController.h */,
 				8514C3F01DDBEC42000402F1 /* MovieDetailViewController.m */,
+				85EB48ED1DE2C82F007E459E /* Movie.storyboard */,
 			);
 			name = Movie;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85EB48EE1DE2C82F007E459E /* Movie.storyboard in Resources */,
+				85EB48F01DE2C874007E459E /* Weather.storyboard in Resources */,
 				856FC8291DDAA4DF003B8816 /* Main.storyboard in Resources */,
 				85B105071DD97640006F4CEB /* LaunchScreen.storyboard in Resources */,
+				85EB48EC1DE2C49B007E459E /* Food.storyboard in Resources */,
 				85B105041DD97640006F4CEB /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

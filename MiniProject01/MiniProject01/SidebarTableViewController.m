@@ -57,7 +57,10 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     // Set the title of navigation bar by using the menu items
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
+//    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:segue.identifier bundle:nil];
+    UIViewController *destViewController = [storyboard instantiateInitialViewController];
     destViewController.title = [[menuItems objectAtIndex:indexPath.row] capitalizedString];
 
 }
