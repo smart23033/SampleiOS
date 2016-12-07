@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IZ7-zJ-gXi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--영화-->
+        <scene sceneID="ikt-LU-AAh">
+            <objects>
+                <tableViewController id="Lcu-ux-K5c" customClass="MovieTableViewController" customModule="MiniProject02" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="ROV-j3-Zz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="130" id="6aI-r4-O18" customClass="MovieCell" customModule="MiniProject02" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6aI-r4-O18" id="nZw-94-COr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6z-m0-dZN">
+                                            <rect key="frame" x="117" y="18" width="122" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="누적관객 수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-OF-Tjk">
+                                            <rect key="frame" x="117" y="85" width="69" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1111-11-11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KV-5d-aRt">
+                                            <rect key="frame" x="288" y="18" width="68" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMr-xn-kDS">
+                                            <rect key="frame" x="325" y="54" width="31" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-JK-DyE">
+                                            <rect key="frame" x="18" y="8" width="91" height="113"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoT-mu-oKe">
+                                            <rect key="frame" x="346.5" y="85" width="9.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-yu-3Dw">
+                                            <rect key="frame" x="117" y="54" width="49" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QoT-mu-oKe" secondAttribute="trailing" constant="11" id="9hD-Cs-GqO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gMr-xn-kDS" secondAttribute="trailing" constant="11" id="MW3-gH-RA2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8KV-5d-aRt" secondAttribute="trailing" constant="11" id="Pkv-BW-6VR"/>
+                                        <constraint firstItem="gMr-xn-kDS" firstAttribute="top" secondItem="nZw-94-COr" secondAttribute="topMargin" constant="46" id="Sbi-sz-0kM"/>
+                                        <constraint firstItem="8KV-5d-aRt" firstAttribute="top" secondItem="nZw-94-COr" secondAttribute="topMargin" constant="10" id="dTd-fQ-JRD"/>
+                                        <constraint firstItem="QoT-mu-oKe" firstAttribute="top" secondItem="nZw-94-COr" secondAttribute="topMargin" constant="77" id="wdJ-65-9Px"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="audiAccLabel" destination="QoT-mu-oKe" id="cbi-fS-x29"/>
+                                    <outlet property="openDateLabel" destination="8KV-5d-aRt" id="HpR-8w-DWw"/>
+                                    <outlet property="ratingLabel" destination="gMr-xn-kDS" id="7OS-X4-2mc"/>
+                                    <outlet property="thumbnailImageView" destination="uEM-JK-DyE" id="wlD-Sd-dOk"/>
+                                    <outlet property="titleLabel" destination="B6z-m0-dZN" id="LIn-ha-zdP"/>
+                                    <segue destination="vTG-5o-2Ou" kind="show" identifier="segue_movie_detail" id="5hq-l4-rBg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lcu-ux-K5c" id="Zoh-p8-up9"/>
+                            <outlet property="delegate" destination="Lcu-ux-K5c" id="s1P-fc-4LS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="영화" id="bKp-MV-Yxs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce4-xd-FW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="123.68815592203899"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="wyO-DQ-28t">
+            <objects>
+                <viewController id="vTG-5o-2Ou" customClass="MovieDetailViewController" customModule="MiniProject02" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="n6L-gv-4IC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Title" id="FZR-BQ-7vX"/>
+                    <connections>
+                        <outlet property="navibar" destination="FZR-BQ-7vX" id="vzC-Jq-dPL"/>
+                        <outlet property="webview" destination="n6L-gv-4IC" id="jax-6c-Og2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bwk-gq-D0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2802" y="124"/>
+        </scene>
+        <!--축제-->
+        <scene sceneID="QSH-D0-uXr">
+            <objects>
+                <viewController id="Tw1-LD-hqz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pQ7-AY-xhO"/>
+                        <viewControllerLayoutGuide type="bottom" id="muM-kK-jNn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B6u-rO-8cS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="축제" id="xVA-qE-vcC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3c-S5-gY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-549.17541229385313"/>
+        </scene>
+        <!--식사-->
+        <scene sceneID="Nl2-ZL-jTj">
+            <objects>
+                <viewController id="Ddu-qg-wDT" customClass="DiningViewController" customModule="MiniProject02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="POb-4A-HwF"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzq-x0-S2q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0da-Js-DPU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="식사" id="Q5e-aY-tFU"/>
+                    <connections>
+                        <outlet property="mapView" destination="0da-Js-DPU" id="KlJ-LJ-iii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-sq-4P7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="822.63868065967017"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wvz-uG-yJt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IZ7-zJ-gXi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="IBN-1n-LcA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qiF-ef-e9f" kind="relationship" relationship="viewControllers" id="GTU-qm-W6F"/>
+                        <segue destination="hzq-Ek-QiE" kind="relationship" relationship="viewControllers" id="aUm-6x-u5K"/>
+                        <segue destination="6JV-wf-ZW0" kind="relationship" relationship="viewControllers" id="8LZ-oo-JF2"/>
+                        <segue destination="BhJ-3l-ap5" kind="relationship" relationship="viewControllers" id="lba-nf-Hi8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AT4-Qq-jxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="1542"/>
+        </scene>
+        <!--축제-->
+        <scene sceneID="hXq-d8-rO2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhJ-3l-ap5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="축제" image="Event" id="f5i-Pn-iil"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wrv-bb-ccj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tw1-LD-hqz" kind="relationship" relationship="rootViewController" id="7UP-BW-TVN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UE4-Rn-EcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="-549.17541229385313"/>
+        </scene>
+        <!--영화-->
+        <scene sceneID="7by-c1-3Od">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6JV-wf-ZW0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화" image="Movie" id="bTg-zY-9FH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S8G-lO-pk4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lcu-ux-K5c" kind="relationship" relationship="rootViewController" id="Bgu-p3-fL5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQ7-Cx-8Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--식사-->
+        <scene sceneID="qFT-mW-ujH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzq-Ek-QiE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="식사" image="Dining" id="TCa-5N-kqu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3yF-Pa-iuB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ddu-qg-wDT" kind="relationship" relationship="rootViewController" id="TBR-wj-Bdq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQy-Nb-LIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="822.63868065967017"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="fVF-SI-vRt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qiF-ef-e9f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="Home" selectedImage="Home" id="awb-V9-I8C"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D4k-Xb-mrF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w5f-Ui-xQY" kind="relationship" relationship="rootViewController" id="3Ul-69-TO5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7m-YZ-eGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="1542.2788605697153"/>
+        </scene>
+        <!--TODAY-->
+        <scene sceneID="e8T-I2-Vsh">
+            <objects>
+                <tableViewController id="w5f-Ui-xQY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsZ-r6-3fq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="200" id="9L4-Me-lG8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9L4-Me-lG8" id="2lf-Wp-qVY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w5f-Ui-xQY" id="g8S-B3-dHt"/>
+                            <outlet property="delegate" destination="w5f-Ui-xQY" id="XTN-hO-t6G"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TODAY" id="Q0V-5k-0bm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQ9-ll-19h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="1540.4797601199402"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dining" width="25" height="25"/>
+        <image name="Event" width="25" height="25"/>
+        <image name="Home" width="36" height="36"/>
+        <image name="Movie" width="24" height="24"/>
+    </resources>
+</document>

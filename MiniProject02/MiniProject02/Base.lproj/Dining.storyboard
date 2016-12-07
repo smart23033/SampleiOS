@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hzq-Ek-QiE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--식사-->
+        <scene sceneID="Nl2-ZL-jTj">
+            <objects>
+                <viewController id="Ddu-qg-wDT" customClass="DiningViewController" customModule="MiniProject02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="POb-4A-HwF"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzq-x0-S2q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0da-Js-DPU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="식사" id="Q5e-aY-tFU"/>
+                    <connections>
+                        <outlet property="mapView" destination="0da-Js-DPU" id="KlJ-LJ-iii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-sq-4P7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="822.63868065967017"/>
+        </scene>
+        <!--식사-->
+        <scene sceneID="qFT-mW-ujH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzq-Ek-QiE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="식사" image="Dining" id="TCa-5N-kqu"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3yF-Pa-iuB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ddu-qg-wDT" kind="relationship" relationship="rootViewController" id="TBR-wj-Bdq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQy-Nb-LIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="822.63868065967017"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dining" width="25" height="25"/>
+    </resources>
+</document>

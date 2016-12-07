@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import ChameleonFramework
 
 
 class MovieTableViewController: UITableViewController {
@@ -28,8 +27,8 @@ class MovieTableViewController: UITableViewController {
             }
         }
         
-        
     }
+    
     func getThumbnailImage(index:Int) -> UIImage{
         let mvo = self.list[index]
         
@@ -101,11 +100,12 @@ class MovieTableViewController: UITableViewController {
             "X-Naver-Client-Secret": "UAnFO2Wq1t"
         ]
         
+//        퍼센트인코딩!
         let encodedTitle = title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
         print("\(title)'s encodedTitle : \(encodedTitle)")
         
-        let url = "https://openapi.naver.com/v1/search/movie.json?query=\(encodedTitle)&display=10&start=1"
+        let url = "https://openapi.naver.com/v1/search/movie.json?query=\(encodedTitle)&display=3&start=1"
         
         Alamofire.request(url, headers: headers).responseJSON { response in
             print("title : \(title)")

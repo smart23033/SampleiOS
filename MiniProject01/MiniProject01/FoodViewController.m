@@ -98,7 +98,7 @@
              NSString *receivedDataString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
              NSLog(@"API result : %@",receivedDataString);
              
-//             iPhone Device에서 로그 보려고 만든 것
+//           iPhone Device에서 로그 보려고 만든 것
              UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"API RESULT" message:receivedDataString preferredStyle:UIAlertControllerStyleAlert];
              UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleCancel handler:nil];
              [alert addAction:cancelAction];
@@ -106,8 +106,6 @@
              
              NSError *error;
              NSDictionary *apiDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:&error];
-             
-             
              
          } failure:^(NSURLSessionTask *operation, NSError *error) {
              NSLog(@"%@", error);
