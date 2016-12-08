@@ -23,4 +23,15 @@ class EventVO{
     
     var contentType : String?
     var contentId : String?
+    var latitude : String?
+    var longitude : String?
+    var overview : String?
+    var sponsor : String?
+    var sponsorTel : String?
+    var playTime : String?
+    var eventPlace : String?
+    var useTimeFestival : String?
+    var discountInfoFestival : String?
+    var ageLimit : String?
+    
 }
