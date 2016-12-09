@@ -15,7 +15,7 @@
 		8504319C1DF542C00023AB01 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504319B1DF542C00023AB01 /* EventCell.swift */; };
 		8504319E1DF552050023AB01 /* EventVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504319D1DF552050023AB01 /* EventVO.swift */; };
 		851361061DED266D000EDF90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851361051DED266D000EDF90 /* AppDelegate.swift */; };
-		851361081DED266D000EDF90 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851361071DED266D000EDF90 /* MainViewController.swift */; };
+		851361081DED266D000EDF90 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851361071DED266D000EDF90 /* MainTableViewController.swift */; };
 		8513610B1DED266D000EDF90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851361091DED266D000EDF90 /* Main.storyboard */; };
 		8513610D1DED266D000EDF90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8513610C1DED266D000EDF90 /* Assets.xcassets */; };
 		851361101DED266D000EDF90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8513610E1DED266D000EDF90 /* LaunchScreen.storyboard */; };
@@ -29,6 +29,8 @@
 		857A61A21DF0073E00B288A2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61A11DF0073E00B288A2 /* MovieDetailViewController.swift */; };
 		857A61A41DF00CBB00B288A2 /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61A31DF00CBB00B288A2 /* DiningViewController.swift */; };
 		857BA1331DED63AE0033C837 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857BA1321DED63AE0033C837 /* MovieTableViewController.swift */; };
+		85A7A1161DFA85F100731919 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7A1151DFA85F100731919 /* WeatherCell.swift */; };
+		85A7A1181DFA870100731919 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7A1171DFA870100731919 /* NewsCell.swift */; };
 		85C6AEAB1DF8E0A00000E4AC /* IntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6AEAA1DF8E0A00000E4AC /* IntroCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,7 @@
 		8504319D1DF552050023AB01 /* EventVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVO.swift; sourceTree = "<group>"; };
 		851361021DED266D000EDF90 /* MiniProject02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniProject02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851361051DED266D000EDF90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		851361071DED266D000EDF90 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		851361071DED266D000EDF90 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		8513610A1DED266D000EDF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8513610C1DED266D000EDF90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8513610F1DED266D000EDF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		857A61A11DF0073E00B288A2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		857A61A31DF00CBB00B288A2 /* DiningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
 		857BA1321DED63AE0033C837 /* MovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		85A7A1151DFA85F100731919 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		85A7A1171DFA870100731919 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		85C6AEAA1DF8E0A00000E4AC /* IntroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +123,9 @@
 		851361171DED3F62000EDF90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				851361071DED266D000EDF90 /* MainViewController.swift */,
+				85A7A1151DFA85F100731919 /* WeatherCell.swift */,
+				85A7A1171DFA870100731919 /* NewsCell.swift */,
+				851361071DED266D000EDF90 /* MainTableViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -151,12 +157,12 @@
 			children = (
 				8504319D1DF552050023AB01 /* EventVO.swift */,
 				8504319B1DF542C00023AB01 /* EventCell.swift */,
-				850431941DF538370023AB01 /* EventTableViewController.swift */,
-				8522D58E1DF6540D00C154EE /* EventDetailViewController.swift */,
-				8522D5901DF6547A00C154EE /* Event.storyboard */,
 				85430F371DF7F5C000D28D48 /* HeaderCell.swift */,
 				85C6AEAA1DF8E0A00000E4AC /* IntroCell.swift */,
 				85396C841DF8EE7800FA791B /* EventMapView.swift */,
+				850431941DF538370023AB01 /* EventTableViewController.swift */,
+				8522D58E1DF6540D00C154EE /* EventDetailViewController.swift */,
+				8522D5901DF6547A00C154EE /* Event.storyboard */,
 				85396C861DF8EE8500FA791B /* EventMap.xib */,
 			);
 			name = Event;
@@ -303,7 +309,7 @@
 				850431951DF538370023AB01 /* EventTableViewController.swift in Sources */,
 				8504319C1DF542C00023AB01 /* EventCell.swift in Sources */,
 				857BA1331DED63AE0033C837 /* MovieTableViewController.swift in Sources */,
-				851361081DED266D000EDF90 /* MainViewController.swift in Sources */,
+				851361081DED266D000EDF90 /* MainTableViewController.swift in Sources */,
 				853875931DEE945A0036FA89 /* MovieCell.swift in Sources */,
 				8522D58F1DF6540D00C154EE /* EventDetailViewController.swift in Sources */,
 				851361061DED266D000EDF90 /* AppDelegate.swift in Sources */,
@@ -311,6 +317,8 @@
 				85396C851DF8EE7800FA791B /* EventMapView.swift in Sources */,
 				85430F381DF7F5C000D28D48 /* HeaderCell.swift in Sources */,
 				853875911DEE8C6B0036FA89 /* MovieVO.swift in Sources */,
+				85A7A1161DFA85F100731919 /* WeatherCell.swift in Sources */,
+				85A7A1181DFA870100731919 /* NewsCell.swift in Sources */,
 				8504319E1DF552050023AB01 /* EventVO.swift in Sources */,
 				85C6AEAB1DF8E0A00000E4AC /* IntroCell.swift in Sources */,
 				857A61A41DF00CBB00B288A2 /* DiningViewController.swift in Sources */,

@@ -11,15 +11,20 @@ import ChameleonFramework
 import GoogleMaps
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+       UIApplication.shared.isStatusBarHidden = false
+        
         // Override point for customization after application launch.
         Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatMintDark, with: .light)
         GMSServices.provideAPIKey("AIzaSyBz_D4HFtb68qGn6apWfdCTjrkloQrPOJw")
+        
+        Thread.sleep(forTimeInterval: 1.0)
+
         return true
     }
 

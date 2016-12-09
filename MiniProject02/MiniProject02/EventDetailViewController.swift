@@ -111,7 +111,7 @@ class EventDetailViewController: UITableViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         
         let footerView = Bundle.main.loadNibNamed("EventMap", owner: self, options: nil)?.first as! EventMapView
-        footerView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: 340)
+        footerView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: 350)
         
         let latitude:String = (evo!.latitude)!
         let longitude:String = (evo!.longitude)!
