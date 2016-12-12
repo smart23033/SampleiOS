@@ -10,9 +10,9 @@ import UIKit
 
 class WeatherCell: UITableViewCell {
 
+    @IBOutlet var currentLocation: UIButton!
     @IBOutlet var weatherImageView: UIImageView!
     @IBOutlet var addressLabel: UILabel!
-    @IBOutlet var celciusLabel: UILabel!
-    @IBOutlet var currentLocationButton: UIButton!
-
+    @IBOutlet var temperatureLabel: UILabel!
+    
 }

@@ -32,6 +32,9 @@
 		85A7A1161DFA85F100731919 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7A1151DFA85F100731919 /* WeatherCell.swift */; };
 		85A7A1181DFA870100731919 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7A1171DFA870100731919 /* NewsCell.swift */; };
 		85C6AEAB1DF8E0A00000E4AC /* IntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6AEAA1DF8E0A00000E4AC /* IntroCell.swift */; };
+		85F49F901DFE63DD006739DE /* WeatherVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F49F8F1DFE63DD006739DE /* WeatherVO.swift */; };
+		85F49F921DFE8BA9006739DE /* NewsVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F49F911DFE8BA9006739DE /* NewsVO.swift */; };
+		85F49F9B1DFE9793006739DE /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F49F991DFE9793006739DE /* News.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		85A7A1151DFA85F100731919 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		85A7A1171DFA870100731919 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		85C6AEAA1DF8E0A00000E4AC /* IntroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCell.swift; sourceTree = "<group>"; };
+		85F49F8F1DFE63DD006739DE /* WeatherVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVO.swift; sourceTree = "<group>"; };
+		85F49F911DFE8BA9006739DE /* NewsVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVO.swift; sourceTree = "<group>"; };
+		85F49F9A1DFE9793006739DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +129,12 @@
 		851361171DED3F62000EDF90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				85F49F8F1DFE63DD006739DE /* WeatherVO.swift */,
 				85A7A1151DFA85F100731919 /* WeatherCell.swift */,
+				85F49F911DFE8BA9006739DE /* NewsVO.swift */,
 				85A7A1171DFA870100731919 /* NewsCell.swift */,
 				851361071DED266D000EDF90 /* MainTableViewController.swift */,
+				85F49F991DFE9793006739DE /* News.storyboard */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -243,6 +252,7 @@
 				8504319A1DF53A910023AB01 /* Movie.storyboard in Resources */,
 				851361101DED266D000EDF90 /* LaunchScreen.storyboard in Resources */,
 				850431981DF53A720023AB01 /* Dining.storyboard in Resources */,
+				85F49F9B1DFE9793006739DE /* News.storyboard in Resources */,
 				8513610D1DED266D000EDF90 /* Assets.xcassets in Resources */,
 				85396C871DF8EE8500FA791B /* EventMap.xib in Resources */,
 				8513610B1DED266D000EDF90 /* Main.storyboard in Resources */,
@@ -306,12 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				850431931DF51D990023AB01 /* EateryVO.swift in Sources */,
+				85F49F921DFE8BA9006739DE /* NewsVO.swift in Sources */,
 				850431951DF538370023AB01 /* EventTableViewController.swift in Sources */,
 				8504319C1DF542C00023AB01 /* EventCell.swift in Sources */,
 				857BA1331DED63AE0033C837 /* MovieTableViewController.swift in Sources */,
 				851361081DED266D000EDF90 /* MainTableViewController.swift in Sources */,
 				853875931DEE945A0036FA89 /* MovieCell.swift in Sources */,
 				8522D58F1DF6540D00C154EE /* EventDetailViewController.swift in Sources */,
+				85F49F901DFE63DD006739DE /* WeatherVO.swift in Sources */,
 				851361061DED266D000EDF90 /* AppDelegate.swift in Sources */,
 				857A61A21DF0073E00B288A2 /* MovieDetailViewController.swift in Sources */,
 				85396C851DF8EE7800FA791B /* EventMapView.swift in Sources */,
@@ -358,6 +370,14 @@
 				8522D5911DF6547A00C154EE /* Base */,
 			);
 			name = Event.storyboard;
+			sourceTree = "<group>";
+		};
+		85F49F991DFE9793006739DE /* News.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85F49F9A1DFE9793006739DE /* Base */,
+			);
+			name = News.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
