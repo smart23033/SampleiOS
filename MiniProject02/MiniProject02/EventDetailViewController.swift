@@ -9,29 +9,84 @@
 import UIKit
 import Alamofire
 import SWXMLHash
+import MXParallaxHeader
+
+let STATUS_BAR_HEIGHT = 20.0 as CGFloat
 
 class EventDetailViewController: UITableViewController {
     
-    static let TABLE_COUNT = 2
+    @IBOutlet var naviItem: UINavigationItem!
+    @IBOutlet var headerView: UIView!
+    @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var backButton: UIBarButtonItem!
+    
     var evo : EventVO? = nil
+    static let TABLE_COUNT = 2
+    var flag = false
+    var visualEffectView : UIVisualEffectView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//                self.navigationController?.navigationBar.tintColor = UIColor.flatMintDark
-//                self.navigationController?.navigationBar.shadowImage = UIImage()
-//                self.navigationController?.navigationBar.isTranslucent = true
+        tableView.parallaxHeader.view = headerView // You can set the parallax header view from the floating view
+        tableView.parallaxHeader.height = 223
+        tableView.parallaxHeader.mode = MXParallaxHeaderMode.fill
+        tableView.parallaxHeader.minimumHeight = navigationBar.bounds.height + STATUS_BAR_HEIGHT
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //        navigationBar.tintColor = UIColor.flatMintDark
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = true
+        
+        naviItem.title = evo?.title
         
         callDetailCommonAPI(){
             self.addFooterView()
         }
         
+        
+        
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("headerView height : \(headerView.bounds.height)")
+        
+        if headerView.bounds.height == navigationBar.bounds.height + STATUS_BAR_HEIGHT && flag == false {
+            //            UIView.animate(withDuration: 0.2, animations: {
+            //                self.addBlurEffect()
+            //            })
+            flag = addBlurEffect()
+            
+        } else if headerView.bounds.height > navigationBar.bounds.height + STATUS_BAR_HEIGHT {
+            flag = removeBlurEffect()
+        }
+    }
+    
+    func removeBlurEffect() -> Bool{
+        visualEffectView?.removeFromSuperview()
+        
+        return false
+    }
+    
+    func addBlurEffect() -> Bool{
+        // Add blur view
+        var bounds = navigationBar.bounds.offsetBy(dx: 0.0, dy: -20.0) as CGRect!
+        bounds?.size.height = (bounds?.height)! + 20
+        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        visualEffectView?.frame = bounds!
+        visualEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        navigationBar.addSubview(visualEffectView!)
+        navigationBar.sendSubview(toBack: visualEffectView!)
+        
+        return true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func clickButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated:true, completion: nil)
     }
     
     func callDetailCommonAPI(completionHandler:@escaping () -> Void){
@@ -66,7 +121,7 @@ class EventDetailViewController: UITableViewController {
                 self.evo?.longitude = item["mapx"].element?.text
                 self.evo?.latitude = item["mapy"].element?.text
                 self.evo?.overview = item["overview"].element?.text
-
+                
                 completionHandler();
                 
                 self.tableView.reloadData()
@@ -75,7 +130,7 @@ class EventDetailViewController: UITableViewController {
         
         url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro?ServiceKey=XA8IjK1LvJAa%2FZKTSiUwKYi%2F7mUrQhEPi6NRK2SIuYldbzDWu3sqEukGU1XhvuwdVoPBlmByG%2FOBEgLxLoph4g%3D%3D"
         
-         parameters = [
+        parameters = [
             "contentTypeId" : "\(evo!.contentType!)",
             "contentId" : "\(evo!.contentId!)",
             "MobileOS" : "ETC",
@@ -105,8 +160,8 @@ class EventDetailViewController: UITableViewController {
     }
     
     func addFooterView(){
-//        print("lat : \(evo!.latitude!)")
-//        print("lng : \(evo!.longitude!)")
+        //        print("lat : \(evo!.latitude!)")
+        //        print("lng : \(evo!.longitude!)")
         
         let screenSize: CGRect = UIScreen.main.bounds
         
@@ -166,7 +221,7 @@ class EventDetailViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
-            return 310
+            return 75
         } else if indexPath.row == 1{
             return 380
         } else{

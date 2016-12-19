@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MXParallaxHeader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Moya-SwiftyJSONMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>127C25588375E84C30C78EE29D67179B</key>
+		<key>29B27BB4A2BFDD75BFF59A01F88C75AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>589C69408AC78E4CE34060153D78E1FB</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>82398A06EBC7A7A770D5BF5D3C589A0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE58340C183B963C900C9FF91F7C3E95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
