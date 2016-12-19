@@ -6,10 +6,12 @@ target 'MiniProject02' do
   use_frameworks!
 
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-pod 'Alamofire', '~> 4.0'
+# pod 'Alamofire', '~> 4.0'
 pod 'SwiftyJSON'
 pod 'GoogleMaps'
 pod 'SWXMLHash', '~> 3.0.0'
+pod 'Moya', '8.0.0-beta.4’
+pod 'Moya-SwiftyJSONMapper’, :git => 'https://github.com/AvdLee/Moya-SwiftyJSONMapper.git'
   # Pods for MiniProject02
 
 end

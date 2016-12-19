@@ -168,7 +168,7 @@ class EventDetailViewController: UITableViewController {
         if indexPath.row == 0{
             return 310
         } else if indexPath.row == 1{
-            return 390
+            return 380
         } else{
             return 0
         }

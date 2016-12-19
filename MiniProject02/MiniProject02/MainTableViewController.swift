@@ -53,7 +53,7 @@ class MainTableViewController: UITableViewController{
         Alamofire.request(url).response { response in
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("data_utf8 : \(utf8Text)")
+//                print("data_utf8 : \(utf8Text)")
                 
                 let xml = SWXMLHash.parse(utf8Text)
                 
@@ -64,7 +64,7 @@ class MainTableViewController: UITableViewController{
                     let nvo = NewsVO()
                     
                     let title = row["title"].element?.text
-                    print(title!)
+//                    print(title!)
                     
                     nvo.title = title!
                     self.list.append(nvo)
@@ -93,7 +93,7 @@ class MainTableViewController: UITableViewController{
             case .success(let value):
                 let json = JSON(value)
 //                print("lat : \(lat), lng : \(lng)")
-//                print("JSON : \(json)")
+                print("JSON : \(json)")
                 
                 let temperature = json["main"]["temp"].intValue
                 let weatherDesc = json["weather"][0]["description"].stringValue
@@ -134,7 +134,7 @@ class MainTableViewController: UITableViewController{
                 
                 let json = JSON(value)
 //                print("lat : \(lat), lng : \(lng)")
-//                print("JSON : \(json)")
+                print("JSON : \(json)")
                 
                 let city = json["addressInfo"]["city_do"].stringValue
                 let detailAddr = json["addressInfo"]["legalDong"].stringValue
@@ -153,7 +153,7 @@ class MainTableViewController: UITableViewController{
     
     
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("list count : \(self.list.count)")
+//        print("list count : \(self.list.count)")
         return 1 + self.list.count
      }
      
@@ -169,7 +169,7 @@ class MainTableViewController: UITableViewController{
             
             if let weatherDesc = wvo.weatherDesc{
                 
-                print("weather : \(weatherDesc)")
+//                print("weather : \(weatherDesc)")
                 
                 switch weatherDesc {
                 case "few clouds":
@@ -197,7 +197,7 @@ class MainTableViewController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
             let row = self.list[indexPath.row-1]
             
-            print("row : \(row), title : \(row.title)")
+//            print("row : \(row), title : \(row.title)")
             cell.titleLabel.text = row.title!
             
             return cell

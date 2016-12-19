@@ -8,12 +8,15 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class MovieVO{
     
     init(){
         
     }
+
+    
     var thumbnailImage : UIImage?
     var thumbnail : String?
     var title : String?
@@ -21,5 +24,5 @@ class MovieVO{
     var openDate : String?
     var rating : Float?
     var link : String?
-
+    
 }

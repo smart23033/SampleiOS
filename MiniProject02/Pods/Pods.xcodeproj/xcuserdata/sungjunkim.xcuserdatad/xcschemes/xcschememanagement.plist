@@ -14,7 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Moya-SwiftyJSONMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MiniProject02.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>127C25588375E84C30C78EE29D67179B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>414922226078A916E44883470BFFC26F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4A175850E158CC7BB57AD47A2FA70F22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5172ACAB7FEA22813859DC97CA0AA16F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>783771851DB62EE5B855A76C8B417B1F</key>
+		<key>589C69408AC78E4CE34060153D78E1FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>895743BB8D8141FF449817109E9E43C4</key>
+		<key>BCD39353ED60BAC3EA68AF316CAD1009</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F2D55D944EFE881A218549DD6EADC53D</key>
+		<key>D13485C2A2714BBCE27215FEB953EFA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

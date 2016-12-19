@@ -10,23 +10,20 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 class MovieTableViewController: UITableViewController {
-
+    
     var list = Array<MovieVO>()
-    var movieName = Array<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.callKobisAPI(){ _ in
-            print(self.movieName)
+        self.callKobisAPI(){ movieName in
+            print("movieName : \(movieName)")
             
-            for row in self.movieName{
+            for row in movieName!{
                 self.callNaverAPI(title: row)
             }
         }
-        
     }
     
     func getThumbnailImage(index:Int) -> UIImage{
@@ -46,114 +43,99 @@ class MovieTableViewController: UITableViewController {
     }
     
     func callKobisAPI(completionHandler: @escaping (Array<String>?) -> ()){
-       
-        let url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
-        
-        let yesterday = NSDate().addingTimeInterval(-24 * 60 * 60)
-        let convertedDate = dateFormatter.string(from: yesterday as Date)
-        
-        let parameters: Parameters = [
-            "key": "dd511a8aba40b8ffdfef0fd2ef9f4a1c",
-            "targetDt": convertedDate
-        ]
-        
-        Alamofire.request(url, parameters: parameters).responseJSON { response in
-            
-            switch response.result {
-            case .success(let value):
-                
-                let json = JSON(value)
-//                print("JSON: \(json)")
-                let boxOfficeResult = json["boxOfficeResult"]
-                let dailyBoxOfficeList = boxOfficeResult["dailyBoxOfficeList"]
-                
-                for row in dailyBoxOfficeList{
-                    let mvo = MovieVO()
+        kobisProvider.request(Kobis.showBoxOffice){ result in
+            switch result {
+            case let .success(response) :
+                do{
+                    var movieName = Array<String>()
+                    let json = try JSON(response.mapJSON())
+                    print("Kobis JSON: \(json)")
+                    let boxOfficeResult = json["boxOfficeResult"]
+                    let dailyBoxOfficeList = boxOfficeResult["dailyBoxOfficeList"]
                     
-                    mvo.title = row.1["movieNm"].stringValue
-                    mvo.openDate = row.1["openDt"].stringValue
-                    mvo.audiAcc = row.1["audiAcc"].stringValue
+                    for row in dailyBoxOfficeList{
+                        let mvo = MovieVO()
+                        
+                        mvo.title = row.1["movieNm"].stringValue
+                        mvo.openDate = row.1["openDt"].stringValue
+                        mvo.audiAcc = row.1["audiAcc"].stringValue
+                        
+                        movieName.append(mvo.title!)
+                        self.list.append(mvo)
+                        
+                    }
                     
-                    self.movieName.append(mvo.title!)
-                    self.list.append(mvo)
-                   
+                    completionHandler(movieName)
+                }catch{
+                    print("error")
                 }
+            case let .failure(error) :
+                print("error : \(error)")
                 
-                completionHandler(self.movieName)
-                
-                case .failure(let error):
-                print(error)
             }
         }
     }
     
     func callNaverAPI(title:String){
-        
         var thumbnail : String?
         var rating : Float?
         var link : String?
         
-        let headers = [
-            "X-Naver-Client-Id": "sJHZz4NN5MaIyWQknPVz",
-            "X-Naver-Client-Secret": "UAnFO2Wq1t"
-        ]
-        
-//        퍼센트인코딩!
-        let encodedTitle = title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        
-        print("\(title)'s encodedTitle : \(encodedTitle)")
-        
-        let url = "https://openapi.naver.com/v1/search/movie.json?query=\(encodedTitle)&display=3&start=1"
-        
-        Alamofire.request(url, headers: headers).responseJSON { response in
-            print("title : \(title)")
-            
-            if let value = response.result.value{
-                let json = JSON(value)
-                print("JSON: \(json)")
-                let item = json["items"][0]
-                
-                thumbnail = item["image"].stringValue == "" ? json["items"][1]["image"].stringValue : item["image"].stringValue
-                rating = item["userRating"].floatValue
-                link = item["link"].stringValue
-                
-                print("thumbnail : \(thumbnail)")
-                print("rating : \(rating)")
-                print("link : \(link)")
-                
-                for mvo in self.list{
-                    if mvo.title == title{
-                        mvo.thumbnail = thumbnail!
-                        mvo.rating = rating!
-                        mvo.link = link!
+        naverProvider.request(Naver.showMovieInfo(title)){result in
+            switch result {
+            case let .success(response) :
+                do{
+                    let json = try JSON(response.mapJSON())
+                    print("JSON: \(json)")
+                    
+                    let item = json["items"][0]
+                    
+                    thumbnail = item["image"].stringValue == "" ? json["items"][1]["image"].stringValue : item["image"].stringValue
+                    rating = item["userRating"].floatValue
+                    link = item["link"].stringValue
+                    
+                    print("thumbnail : \(thumbnail)")
+                    print("rating : \(rating)")
+                    print("link : \(link)")
+                    
+                    for mvo in self.list{
+                        if mvo.title == title{
+                            mvo.thumbnail = thumbnail!
+                            mvo.rating = rating!
+                            mvo.link = link!
+                        }
                     }
+                    
+                    self.tableView.reloadData()
+                    
+                }catch{
+                    print("error")
                 }
-                
-                 self.tableView.reloadData()
+            case let .failure(error) :
+                print("error : \(error)")
             }
         }
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.list.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         
-//        print("title : \(row.title)")
+        //        print("title : \(row.title)")
         
         cell.titleLabel?.text = row.title
         cell.openDateLabel?.text = row.openDate
@@ -175,19 +157,19 @@ class MovieTableViewController: UITableViewController {
     
     //     MARK: - Navigation
     
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "segue_movie_detail" {
-                let cell = sender as! MovieCell
-    
-                let path = self.tableView.indexPath(for: cell)
-    
-                let param = self.list[path!.row]
-    
-                (segue.destination as? MovieDetailViewController)?.mvo = param
-    
-                print("segue")
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_movie_detail" {
+            let cell = sender as! MovieCell
+            
+            let path = self.tableView.indexPath(for: cell)
+            
+            let param = self.list[path!.row]
+            
+            (segue.destination as? MovieDetailViewController)?.mvo = param
+            
+            print("segue")
         }
+    }
 }
 
 
