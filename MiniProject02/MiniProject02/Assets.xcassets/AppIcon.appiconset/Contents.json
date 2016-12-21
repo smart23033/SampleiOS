@@ -36,8 +36,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "스크린샷 2016-12-21 오전 10.52.02.png",
       "scale" : "3x"
     }
   ],

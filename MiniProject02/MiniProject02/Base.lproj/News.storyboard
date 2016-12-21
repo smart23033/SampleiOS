@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qiF-ef-e9f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qiF-ef-e9f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,6 +82,7 @@
                                                 <color key="titleColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <state key="highlighted" image="LocationPressed"/>
                                             <connections>
                                                 <action selector="setCurrentLocation:" destination="VoP-32-kOX" eventType="touchUpInside" id="Oml-FZ-1T9"/>
                                             </connections>
@@ -120,6 +121,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="2OG-c7-kZl" id="02O-Fp-zwy"/>
+                                    <segue destination="TRv-dN-wnN" kind="show" identifier="segue_news_detail" id="Xw7-t9-dGC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -136,9 +138,48 @@
             </objects>
             <point key="canvasLocation" x="1996" y="1540.4797601199402"/>
         </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="XSq-zJ-Pir">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="TRv-dN-wnN" customClass="NewsDetailViewController" customModule="MiniProject02" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="Znn-MP-GGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="0Zf-jX-JnC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Zf-jX-JnC" id="Kef-g3-FCO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7x-xK-orF">
+                                            <rect key="frame" x="8" y="0.0" width="359" height="191"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TRv-dN-wnN" id="9NF-Ku-QDm"/>
+                            <outlet property="delegate" destination="TRv-dN-wnN" id="k1Q-Q2-ZEt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="N2V-gw-Suq"/>
+                    <connections>
+                        <outlet property="navibar" destination="N2V-gw-Suq" id="Ses-bP-n5u"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFK-bI-qUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="1539.5802098950526"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Home" width="25" height="25"/>
         <image name="Location" width="50" height="50"/>
+        <image name="LocationPressed" width="50" height="50"/>
     </resources>
 </document>

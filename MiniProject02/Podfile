@@ -13,5 +13,6 @@ pod 'SWXMLHash', '~> 3.0.0'
 pod 'Moya', '8.0.0-beta.4’
 pod 'Moya-SwiftyJSONMapper’, :git => 'https://github.com/AvdLee/Moya-SwiftyJSONMapper.git'
 pod "MXParallaxHeader"
+pod 'Kanna', '~> 2.1.0'
 
 end

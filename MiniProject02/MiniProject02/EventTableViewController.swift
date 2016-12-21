@@ -12,7 +12,7 @@ import SWXMLHash
 
 class EventTableViewController: UITableViewController {
 
-    @IBOutlet var moreBtn: UIButton!
+    @IBOutlet var moreButton: UIButton!
     
     var list = Array<EventVO>()
     var page = 1
@@ -37,6 +37,7 @@ class EventTableViewController: UITableViewController {
         if let savedImage = evo.thumbnailImage{
             return savedImage
         }else{
+            
             let thumbnailURL = URL(string: evo.thumbnail!)
             let imageData = NSData(contentsOf: thumbnailURL!)
             
@@ -103,7 +104,7 @@ class EventTableViewController: UITableViewController {
             
                 let totalCount = Int((xml["response"]["body"]["totalCount"].element?.text!)!)
                 if self.list.count >= totalCount!{
-                    self.moreBtn.isHidden = true
+                    self.moreButton.isHidden = true
                 }
             }
             
@@ -139,7 +140,9 @@ class EventTableViewController: UITableViewController {
                 cell.thumbnailImageView.image = self.getThumbnailImage(index: indexPath.row)
             }
         } else{
-            cell.thumbnailImageView.image = nil
+            let evo = self.list[indexPath.row]
+            cell.thumbnailImageView.image = #imageLiteral(resourceName: "NoImage")
+            evo.thumbnailImage = #imageLiteral(resourceName: "NoImage")
         }
         
         return cell
@@ -164,6 +167,7 @@ class EventTableViewController: UITableViewController {
             let param = self.list[path!.row];
             
             (segue.destination as? EventDetailViewController)?.evo = param
+            
         }
     }
  

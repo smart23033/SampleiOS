@@ -29,28 +29,26 @@ class EventDetailViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.parallaxHeader.view = headerView // You can set the parallax header view from the floating view
-        tableView.parallaxHeader.height = 223
+        tableView.parallaxHeader.height = 240
         tableView.parallaxHeader.mode = MXParallaxHeaderMode.fill
         tableView.parallaxHeader.minimumHeight = navigationBar.bounds.height + STATUS_BAR_HEIGHT
         navigationBar.setBackgroundImage(UIImage(), for: .default)
-        //        navigationBar.tintColor = UIColor.flatMintDark
+//        navigationBar.tintColor = UIColor.flatMintDark
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
         
-        naviItem.title = evo?.title
+        naviItem.title = ""
         
         callDetailCommonAPI(){
             self.addFooterView()
         }
-        
-        
         
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        print("headerView height : \(headerView.bounds.height)")
         
-        if headerView.bounds.height == navigationBar.bounds.height + STATUS_BAR_HEIGHT && flag == false {
+        if headerView.bounds.height <= navigationBar.bounds.height + STATUS_BAR_HEIGHT && flag == false {
             //            UIView.animate(withDuration: 0.2, animations: {
             //                self.addBlurEffect()
             //            })
@@ -64,18 +62,22 @@ class EventDetailViewController: UITableViewController {
     func removeBlurEffect() -> Bool{
         visualEffectView?.removeFromSuperview()
         
+        naviItem.title = ""
+        
         return false
     }
     
     func addBlurEffect() -> Bool{
         // Add blur view
         var bounds = navigationBar.bounds.offsetBy(dx: 0.0, dy: -20.0) as CGRect!
-        bounds?.size.height = (bounds?.height)! + 20
-        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        bounds?.size.height = (bounds?.height)! + STATUS_BAR_HEIGHT
+        visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         visualEffectView?.frame = bounds!
         visualEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         navigationBar.addSubview(visualEffectView!)
         navigationBar.sendSubview(toBack: visualEffectView!)
+        
+        naviItem.title = evo?.title
         
         return true
     }
@@ -194,7 +196,7 @@ class EventDetailViewController: UITableViewController {
         
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderCell
-            
+       
             cell.eventImageView.image = evo?.thumbnailImage
             cell.titleLabel.text = evo?.title
             cell.startDate.text = evo?.startDate

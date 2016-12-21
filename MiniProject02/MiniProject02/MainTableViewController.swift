@@ -12,9 +12,11 @@ import Alamofire
 import SwiftyJSON
 import SWXMLHash
 
-class MainTableViewController: UITableViewController{
+class MainTableViewController: UITableViewController,CLLocationManagerDelegate{
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var locationManager = CLLocationManager()
+    
+    //    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var wvo = WeatherVO()
     var list = Array<NewsVO>()
     
@@ -22,19 +24,24 @@ class MainTableViewController: UITableViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Cochin-Italic", size: 24)!, NSForegroundColorAttributeName: UIColor.white]
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         
-        if let lat = appDelegate.locationManager.location?.coordinate.latitude,let lng = appDelegate.locationManager.location?.coordinate.longitude{
+        if let lat = locationManager.location?.coordinate.latitude, let lng = locationManager.location?.coordinate.longitude{
             callReverseGeoCodingAPI(lat:lat,lng:lng)
             callOpenWeatherMapAPI(lat: lat, lng: lng)
         }
         
         callNewsRSS()
-    
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.setThemeUsingPrimaryColor(UIColor.white, with: .light)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Cochin-Italic", size: 24)!, NSForegroundColorAttributeName: UIColor.white]
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,8 +49,26 @@ class MainTableViewController: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("didFailWithError: \(error)")
+        let alert = UIAlertController.init(title: "Error", message: "fail to get your location", preferredStyle: .alert)
+        let cancelAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let lat = locationManager.location?.coordinate.latitude, let lng = locationManager.location?.coordinate.longitude{
+            callReverseGeoCodingAPI(lat:lat,lng:lng)
+            callOpenWeatherMapAPI(lat: lat, lng: lng)
+        }
+    }
+    
+    
     @IBAction func setCurrentLocation(_ sender: Any) {
-        print("button clicked")
+        print("current location button clicked")
+        locationManager.startUpdatingLocation()
+        locationManager.stopUpdatingLocation()
     }
     
     func callNewsRSS(){
@@ -53,7 +78,7 @@ class MainTableViewController: UITableViewController{
         Alamofire.request(url).response { response in
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("data_utf8 : \(utf8Text)")
+                                print("data_utf8 : \(utf8Text)")
                 
                 let xml = SWXMLHash.parse(utf8Text)
                 
@@ -64,9 +89,13 @@ class MainTableViewController: UITableViewController{
                     let nvo = NewsVO()
                     
                     let title = row["title"].element?.text
-//                    print(title!)
+                    let link = row["link"].element?.text
+                    
+                    //                    print(title!)
                     
                     nvo.title = title!
+                    nvo.link = link!
+                    
                     self.list.append(nvo)
                     
                 }
@@ -76,7 +105,7 @@ class MainTableViewController: UITableViewController{
     }
     
     func callOpenWeatherMapAPI(lat:CLLocationDegrees,lng:CLLocationDegrees){
-//            http://api.openweathermap.org/data/2.5/weather?lat=37.5452562218505&lon=127.061169824355&appid=7123bf3dbc3ab29da45d78301b0f2e59
+        //            http://api.openweathermap.org/data/2.5/weather?lat=37.5452562218505&lon=127.061169824355&appid=7123bf3dbc3ab29da45d78301b0f2e59
         
         let url = "http://api.openweathermap.org/data/2.5/weather"
         
@@ -93,7 +122,7 @@ class MainTableViewController: UITableViewController{
             case .success(let value):
                 let json = JSON(value)
 //                print("lat : \(lat), lng : \(lng)")
-                print("JSON : \(json)")
+//                print("JSON : \(json)")
                 
                 let temperature = json["main"]["temp"].intValue
                 let weatherDesc = json["weather"][0]["description"].stringValue
@@ -107,11 +136,11 @@ class MainTableViewController: UITableViewController{
             }
             
         }
-
+        
     }
     
     func callReverseGeoCodingAPI(lat:CLLocationDegrees,lng:CLLocationDegrees){
-              //        https://apis.skplanetx.com/tmap/geo/reversegeocoding?version={version}&lat={lat}&lon={lon}&coordType={coordType}&addressType={addressType}&callback={callback}
+        //        https://apis.skplanetx.com/tmap/geo/reversegeocoding?version={version}&lat={lat}&lon={lon}&coordType={coordType}&addressType={addressType}&callback={callback}
         
         let url = "https://apis.skplanetx.com/tmap/geo/reversegeocoding"
         
@@ -134,7 +163,7 @@ class MainTableViewController: UITableViewController{
                 
                 let json = JSON(value)
 //                print("lat : \(lat), lng : \(lng)")
-                print("JSON : \(json)")
+//                print("JSON : \(json)")
                 
                 let city = json["addressInfo"]["city_do"].stringValue
                 let detailAddr = json["addressInfo"]["legalDong"].stringValue
@@ -152,17 +181,17 @@ class MainTableViewController: UITableViewController{
     }
     
     
-     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("list count : \(self.list.count)")
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //        print("list count : \(self.list.count)")
         return 1 + self.list.count
-     }
-     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell") as! WeatherCell
             
             if let city = wvo.city, let detailAddr = wvo.detailAddr, let temperature = wvo.temperature{
-                print("\(city), \(detailAddr), \(temperature)")
+//                print("\(city), \(detailAddr), \(temperature)")
                 cell.addressLabel.text = "\(city) \(detailAddr)"
                 cell.temperatureLabel.text = "\(temperature)"
             }
@@ -178,7 +207,7 @@ class MainTableViewController: UITableViewController{
                     cell.weatherImageView.image = UIImage(named: "BrokenClouds")
                 case "clear sky":
                     cell.weatherImageView.image = UIImage(named: "Clear")
-                case "Mist":
+                case "mist", "haze":
                     cell.weatherImageView.image = UIImage(named: "Mist")
                 default :
                     if weatherDesc.contains("rain"){
@@ -192,26 +221,41 @@ class MainTableViewController: UITableViewController{
                 }
             }
             
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
             let row = self.list[indexPath.row-1]
             
-//            print("row : \(row), title : \(row.title)")
+            //            print("row : \(row), title : \(row.title)")
             cell.titleLabel.text = row.title!
             
             return cell
         }
-     }
-     
-     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
             return 100
         }else{
             return 100
         }
-     }
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_news_detail" {
+            let cell = sender as! NewsCell
+            
+            let path = self.tableView.indexPath(for: cell)
+            
+            let param = self.list[path!.row-1]
+            
+            (segue.destination as? NewsDetailViewController)?.nvo = param
+            
+            
+        }
+    }
     
 }
 

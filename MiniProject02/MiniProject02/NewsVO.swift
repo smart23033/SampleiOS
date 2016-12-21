@@ -14,4 +14,5 @@ class NewsVO{
     }
     
     var title : String?
+    var link : String?
 }

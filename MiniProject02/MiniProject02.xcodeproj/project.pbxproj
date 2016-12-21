@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C08408D2227587E22599A55 /* Pods_MiniProject02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767F0FB0C74CB53897312002 /* Pods_MiniProject02.framework */; };
+		8501E76A1E08F238006BAE0A /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501E7691E08F238006BAE0A /* NewsDetailViewController.swift */; };
 		850431931DF51D990023AB01 /* EateryVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850431921DF51D990023AB01 /* EateryVO.swift */; };
 		850431951DF538370023AB01 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850431941DF538370023AB01 /* EventTableViewController.swift */; };
 		850431981DF53A720023AB01 /* Dining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850431961DF53A720023AB01 /* Dining.storyboard */; };
@@ -37,12 +38,14 @@
 		85F49F901DFE63DD006739DE /* WeatherVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F49F8F1DFE63DD006739DE /* WeatherVO.swift */; };
 		85F49F921DFE8BA9006739DE /* NewsVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F49F911DFE8BA9006739DE /* NewsVO.swift */; };
 		85F49F9B1DFE9793006739DE /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F49F991DFE9793006739DE /* News.storyboard */; };
+		85FEDE841E0A1FEF00A3EE7E /* DiningDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEDE831E0A1FEF00A3EE7E /* DiningDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A58AC4FC8D73DA636E92E3D /* Pods-MiniProject02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProject02.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniProject02/Pods-MiniProject02.release.xcconfig"; sourceTree = "<group>"; };
 		705DCC26EEDCF7BF2341A1E8 /* Pods-MiniProject02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniProject02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniProject02/Pods-MiniProject02.debug.xcconfig"; sourceTree = "<group>"; };
 		767F0FB0C74CB53897312002 /* Pods_MiniProject02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniProject02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8501E7691E08F238006BAE0A /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		850431921DF51D990023AB01 /* EateryVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateryVO.swift; sourceTree = "<group>"; };
 		850431941DF538370023AB01 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		850431971DF53A720023AB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dining.storyboard; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		85F49F8F1DFE63DD006739DE /* WeatherVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVO.swift; sourceTree = "<group>"; };
 		85F49F911DFE8BA9006739DE /* NewsVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVO.swift; sourceTree = "<group>"; };
 		85F49F9A1DFE9793006739DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
+		85FEDE831E0A1FEF00A3EE7E /* DiningDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				85F49F911DFE8BA9006739DE /* NewsVO.swift */,
 				85A7A1171DFA870100731919 /* NewsCell.swift */,
 				851361071DED266D000EDF90 /* MainTableViewController.swift */,
+				8501E7691E08F238006BAE0A /* NewsDetailViewController.swift */,
 				85F49F991DFE9793006739DE /* News.storyboard */,
 			);
 			name = Home;
@@ -158,6 +163,7 @@
 			children = (
 				850431921DF51D990023AB01 /* EateryVO.swift */,
 				857A61A31DF00CBB00B288A2 /* DiningViewController.swift */,
+				85FEDE831E0A1FEF00A3EE7E /* DiningDetailViewController.swift */,
 				850431961DF53A720023AB01 /* Dining.storyboard */,
 			);
 			name = Dining;
@@ -335,6 +341,7 @@
 				850431951DF538370023AB01 /* EventTableViewController.swift in Sources */,
 				8504319C1DF542C00023AB01 /* EventCell.swift in Sources */,
 				857BA1331DED63AE0033C837 /* MovieTableViewController.swift in Sources */,
+				8501E76A1E08F238006BAE0A /* NewsDetailViewController.swift in Sources */,
 				851361081DED266D000EDF90 /* MainTableViewController.swift in Sources */,
 				853875931DEE945A0036FA89 /* MovieCell.swift in Sources */,
 				8522D58F1DF6540D00C154EE /* EventDetailViewController.swift in Sources */,
@@ -342,6 +349,7 @@
 				851361061DED266D000EDF90 /* AppDelegate.swift in Sources */,
 				857A61A21DF0073E00B288A2 /* MovieDetailViewController.swift in Sources */,
 				851143A71E036B1A00A56051 /* KobisAPI.swift in Sources */,
+				85FEDE841E0A1FEF00A3EE7E /* DiningDetailViewController.swift in Sources */,
 				85396C851DF8EE7800FA791B /* EventMapView.swift in Sources */,
 				85430F381DF7F5C000D28D48 /* HeaderCell.swift in Sources */,
 				853875911DEE8C6B0036FA89 /* MovieVO.swift in Sources */,

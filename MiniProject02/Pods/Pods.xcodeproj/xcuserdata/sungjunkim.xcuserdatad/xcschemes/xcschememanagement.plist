@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kanna.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MXParallaxHeader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>29B27BB4A2BFDD75BFF59A01F88C75AC</key>
+		<key>414922226078A916E44883470BFFC26F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>414922226078A916E44883470BFFC26F</key>
+		<key>44C88ED154981ACEA7243E866CDB49BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6B535F108F36F971F443054A2FB1F624</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82398A06EBC7A7A770D5BF5D3C589A0B</key>
+		<key>AE58340C183B963C900C9FF91F7C3E95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE58340C183B963C900C9FF91F7C3E95</key>
+		<key>B9D10D44F2493CAE5875449AD8F1351B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

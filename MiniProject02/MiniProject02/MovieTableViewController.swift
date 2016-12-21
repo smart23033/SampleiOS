@@ -167,7 +167,6 @@ class MovieTableViewController: UITableViewController {
             
             (segue.destination as? MovieDetailViewController)?.mvo = param
             
-            print("segue")
         }
     }
 }

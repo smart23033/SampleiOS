@@ -11,7 +11,7 @@ import GoogleMaps
 import Alamofire
 import SwiftyJSON
 
-class DiningViewController: UIViewController, CLLocationManagerDelegate{
+class DiningViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate{
     @IBOutlet var mapView: GMSMapView!
     
     var locationManager = CLLocationManager()
@@ -31,6 +31,18 @@ class DiningViewController: UIViewController, CLLocationManagerDelegate{
         
     }
     
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("title : \(marker.title)")
+        let destinationVC = DiningDetailViewController()
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        self.navigationController?.pushViewController(destinationVC, animated: false)
+     
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error" + error.localizedDescription)
     }
@@ -47,6 +59,7 @@ class DiningViewController: UIViewController, CLLocationManagerDelegate{
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         self.view = mapView
+        mapView.delegate = self
         
 //        let marker = GMSMarker()
 //        marker.position = center

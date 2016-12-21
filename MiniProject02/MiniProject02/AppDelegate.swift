@@ -11,9 +11,7 @@ import ChameleonFramework
 import GoogleMaps
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
-
-    var locationManager = CLLocationManager()
+class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,11 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         // Override point for customization after application launch.
         Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatMintDark, with: .light)
         GMSServices.provideAPIKey("AIzaSyBz_D4HFtb68qGn6apWfdCTjrkloQrPOJw")
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
         
         Thread.sleep(forTimeInterval: 1.0)
         

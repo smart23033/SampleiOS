@@ -8,6 +8,7 @@ PODS:
   - GoogleMaps/Base (2.1.0)
   - GoogleMaps/Maps (2.1.0):
     - GoogleMaps/Base (= 2.1.0)
+  - Kanna (2.1.1)
   - Moya (8.0.0-beta.4):
     - Moya/Core (= 8.0.0-beta.4)
   - Moya-SwiftyJSONMapper (2.0):
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - GoogleMaps
+  - Kanna (~> 2.1.0)
   - Moya (= 8.0.0-beta.4)
   - Moya-SwiftyJSONMapper (from `https://github.com/AvdLee/Moya-SwiftyJSONMapper.git`)
   - MXParallaxHeader
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
+  Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
   Moya: bad6f72ec40661f09a8cd85ab470226d2795a485
   Moya-SwiftyJSONMapper: 3eebc4e84ca2277972cad6f2465a419c03a39d53
   MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
   SWXMLHash: e0f6935971f01b06fb228cf435510d998ecde647
 
-PODFILE CHECKSUM: c1a80e20b5cd349f97cf83ddc7b6e3c0852bd32f
+PODFILE CHECKSUM: bd115c50026fc0db17d539321287f3bfbc8e1442
 
 COCOAPODS: 1.1.1
